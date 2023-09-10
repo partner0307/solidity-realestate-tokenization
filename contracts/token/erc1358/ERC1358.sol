@@ -24,7 +24,6 @@ contract ERC1358 is  ERC1358NFTFull, Ownable {
         string _name,
         string _symbol
     )
-        public
         ERC1358NFTFull(_name, _symbol)
     {
 
@@ -56,8 +55,7 @@ contract ERC1358 is  ERC1358NFTFull, Ownable {
             _decimals,
             _tokenOwner,
             _fungibleTokenSupply,
-            tokenId,
-            address(0)
+            tokenId
         );
 
         require(super._mint(_tokenOwner, tokenId) == true);
@@ -174,8 +172,7 @@ contract ERC1358 is  ERC1358NFTFull, Ownable {
         uint256 _decimals,
         address _tokenOwner,
         uint256 _fungibleTokenSupply,
-        uint256 _tokenId,
-        address
+        uint256 _tokenId
     )
         internal
         returns (address)
